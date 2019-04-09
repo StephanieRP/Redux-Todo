@@ -26,8 +26,8 @@ export class TodoContainer extends Component {
     this.props.completeTodo(id);
   };
 
-  deleteTodo = () => {
-    this.props.deleteTodo();
+  deleteTodo = id => {
+    this.props.deleteTodo(id);
   };
 
   render() {
@@ -53,6 +53,7 @@ export class TodoContainer extends Component {
             <Todos
               todos={this.props.todos}
               completeTodo={this.props.completeTodo}
+              deleteTodo={this.props.deleteTodo}
             />
           </div>
         </div>

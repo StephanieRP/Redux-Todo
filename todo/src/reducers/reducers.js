@@ -26,19 +26,35 @@ const reducer = (state = initialState, action) => {
       };
     case DELETE_TODO:
       return {
-        //    state.todos.filter(todo => todo.id !== action.id)
+        ...state,
+        todos: state.todos.filter(todo => !todo.completed)
       };
     case COMPLETE_TODO:
-      const copy = [...state.todos].map(todo => {
-        if (todo.id === action.payload) {
-          todo.completed = !todo.completed;
-        }
-        return todo;
-      });
+      // const copy = [...state.todos].map(todo => {
+      //   if (todo.id === action.payload) {
+      //     todo.completed = !todo.completed;
+      //   }
+      //   return todo;
+      // });
+      // return {
+      //   ...state,
+      //   todos: copy
+      // };
+
       return {
         ...state,
-        todos: copy
+        todos: state.todos.map(todo => {
+          if (todo.id === action.payload) {
+            return {
+              ...todo,
+              completed: !todo.completed
+            };
+          } else {
+            return todo;
+          }
+        })
       };
+
     default:
       return state;
   }

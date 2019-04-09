@@ -13,13 +13,16 @@ function Todos(props) {
               {todo.text}
             </div>
             <div className="todo-task">
-              <input
-                type="checkbox"
-                name="completed"
-                value={todo.completed}
-                onChange={() => props.completeTodo(todo.id)}
-              />
-              <span> X </span>
+              <p> Actions</p>
+              <div>
+                <input
+                  type="checkbox"
+                  name="completed"
+                  value={todo.completed}
+                  onChange={() => props.completeTodo(todo.id)}
+                />
+                <span onClick={() => props.deleteTodo(todo.id)}> X </span>
+              </div>
             </div>
           </div>
         );
