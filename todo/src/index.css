@@ -139,28 +139,68 @@ table {
   border-spacing: 0;
 }
 
+.header {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.header h1 {
+  background: #292e1e;
+  display: inline-block;
+  padding: 1rem;
+}
+
 .main-container {
   width: 70%;
   height: 100vh;
   color: white;
   margin: 0 auto;
 }
-.main-container .header {
-  background: #9649cb;
-  padding: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-.main-container .header h1 {
-  background: #292e1e;
-  display: inline-block;
-  padding: 1rem;
-}
-.main-container .todos {
-  margin: 3rem auto;
+.main-container .todo {
+  margin: 0 auto;
   width: 70%;
+  padding: 9rem;
+  border: #7f0799 solid 0.5px;
+}
+.main-container .todo input {
+  width: 60%;
+  background: white;
+  border: #7f0799 solid 0.5px;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+.main-container .todo button {
+  background: #7f0799;
+  color: white;
+  border: #7f0799 solid;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+}
+.main-container .todo-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #292e1e;
+}
+.main-container .todo-info .todo-text {
+  border-bottom: 1px #7f0799 solid;
+  width: 100%;
+  padding: 3rem;
+}
+.main-container .todo-info .todo-task {
+  display: inline-block;
+}
+
+.complete {
+  background: #7f0799;
+  text-decoration: line-through;
 }
 
 /*# sourceMappingURL=index.css.map */
