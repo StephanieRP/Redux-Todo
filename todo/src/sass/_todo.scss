@@ -1,0 +1,68 @@
+.main-container {
+  // background: $lightpurple;
+  width: 70%;
+  height: 100vh;
+  color: white;
+  margin: 0 auto;
+
+  .todo {
+    margin: 0 auto;
+    // background: $black;
+    padding: 2rem;
+    border: $darkpurple solid 0.5px;
+
+    input {
+      width: 70%;
+      background: white;
+      border: $darkpurple solid 0.5px;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    button {
+      background: $darkpurple;
+      color: white;
+      border: $darkpurple solid;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      margin-left: 6.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .todo-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $lightpurple;
+    font-size: 1.5rem;
+    .todo-text {
+      border-bottom: 1px $darkpurple solid;
+      width: 100%;
+      padding: 3rem;
+    }
+
+    .todo-task {
+      padding: 2.3rem;
+      background: $darkpurple;
+      border-left: $lightpurple solid 0.1px;
+      border-bottom: $lightpurple solid 0.1px;
+
+      p {
+        font-size: 1.5rem;
+      }
+      div {
+        display: flex;
+      }
+    }
+  }
+}
+
+.complete {
+  background: $darkpurple;
+  text-decoration: line-through;
+}
